@@ -1,6 +1,6 @@
 <?php
 
-$con = new mysqli("localhost","root","","dbLogin");
+$con = new mysqli("localhost","root","","db_Login");
 if ($con->connect_error) {
     //echo "ERROR EN LA CONEXION :N° ".$con->connect_errno."<br> Detalle:".$con->connect_error;
     

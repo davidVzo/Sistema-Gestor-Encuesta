@@ -14,9 +14,6 @@ if (empty($_SESSION["usuario"])) {
 # No hace falta un else, pues si el usuario no se loguea, todo lo de abajo no se ejecuta
 //echo "Soy un mensaje secreto";
 //echo $_SESSION["usuario"];
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -388,7 +385,24 @@ if (empty($_SESSION["usuario"])) {
                 </div>
             </div>
         </div>
-       
+        <script src="../sources/scripts/Script.js"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="bootstrap/vendor/jquery/jquery.min.js"></script>
+        <script src="bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Core plugin JavaScript-->
+        <script src="bootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for all pages-->
+        <script src="bootstrap/js/sb-admin-2.min.js"></script>
+
+        <!-- Page level plugins -->
+        <script src="bootstrap/vendor/chart.js/Chart.min.js"></script>
+
+        <!-- Page level custom scripts -->
+        <script src="bootstrap/js/demo/chart-area-demo.js"></script>
+        <script src="bootstrap/js/demo/chart-pie-demo.js"></script>
+
 </body>
 
 </html>
