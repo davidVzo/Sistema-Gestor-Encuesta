@@ -30,9 +30,7 @@ if (empty($_SESSION["usuario"])) {
 
     <!-- Custom fonts for this template-->
     <link href="bootstrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="bootstrap/css/sb-admin-2.min.css" rel="stylesheet">
@@ -78,8 +76,7 @@ if (empty($_SESSION["usuario"])) {
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Components</span>
                 </a>
@@ -94,13 +91,11 @@ if (empty($_SESSION["usuario"])) {
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Utilities</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
                         <a class="collapse-item" href="utilities-color.html">Colors</a>
@@ -121,8 +116,7 @@ if (empty($_SESSION["usuario"])) {
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Pages</span>
                 </a>
@@ -348,17 +342,14 @@ if (empty($_SESSION["usuario"])) {
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
                                     <?php echo $_SESSION["usuario"] ?>
                                 </span>
-                                <img class="img-profile rounded-circle"
-                                    src="imagenes/<?php echo $_SESSION['usuario'] ?>.jpg">
+                                <img class="img-profile rounded-circle" src="imagenes/<?php echo $_SESSION['usuario'] ?>.jpg">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
@@ -394,7 +385,7 @@ if (empty($_SESSION["usuario"])) {
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Listado de Usuarios</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -427,7 +418,7 @@ if (empty($_SESSION["usuario"])) {
                                         $idUsuario = null;
                                         $resultado = consultarUsuario($con, $idUsuario);
                                         while ($fila = mysqli_fetch_assoc($resultado)) {
-                                            ?>
+                                        ?>
 
                                             <tr>
                                                 <td>
@@ -437,32 +428,30 @@ if (empty($_SESSION["usuario"])) {
                                                     <?php echo $fila['contrasena']; ?>
                                                 </td>
                                                 <td> <img src="imagenes/<?php if ($fila['imagen'] != " ") {
-                                                    echo $fila['imagen'];
-                                                } else {
-                                                    echo "userDefault.png";
-                                                } ?>" style="width: 45px;"> </td>
+                                                                            echo $fila['imagen'];
+                                                                        } else {
+                                                                            echo "userDefault.png";
+                                                                        } ?>" style="width: 45px;"> </td>
                                                 <!-- <td><?php echo $fila['imagen']; ?></td> -->
 
-                                                <td><a class="btn btn-danger"
-                                                        href="eliminarUsuario.php?id=<?php echo $fila['id']; ?>"
-                                                        onclick="return confirm('Seguro Eliminar !!')">Eliminar</a>
-                                                        <a href="editarUsuario.php?id=<?php echo $fila['id']; ?>" >Ver </a>
-                                                    
+                                                <td><a class="btn btn-danger" href="eliminarUsuario.php?id=<?php echo $fila['id']; ?>" onclick="return confirm('Seguro Eliminar !!')">Eliminar</a>
+                                                    <a class="btn btn-warning"  href="editarUsuario.php?id=<?php echo $fila['id']; ?>">Ver </a>
+
 
                                                 </td>
 
                                             </tr>
-                                            
-                                            <?php
-                                            
+
+                                        <?php
+
                                         }
 
                                         ?>
 
-                                        
+
 
                                     </tbody>
-                                    
+
                                 </table>
                             </div>
                         </div>
@@ -497,8 +486,7 @@ if (empty($_SESSION["usuario"])) {
         </a>
 
         <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -517,7 +505,7 @@ if (empty($_SESSION["usuario"])) {
         </div>
 
 
-        
+
         <!-- Bootstrap core JavaScript-->
         <script src="bootstrap/vendor/jquery/jquery.min.js"></script>
         <script src="bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
