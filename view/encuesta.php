@@ -40,13 +40,11 @@
         /* ocultamos los radiobuttons */
         input[name=ratingAtencion],
         input[name=ratingSabor],
-        input[name=ratingFrescura],
-        input[name=ratingTemperatura],
-        input[name=ratingLimpiezaLocal],
-        input[name=ratingLimpiezaPersonal],
+        input[name=ratingPresentacion],
         input[name=ratingDisponibilidad],
-        input[name=ratingConocimiento],
-        input[name=ratingAmabilidad] {
+
+        input[name=ratingLimpiezaLocal],
+        input[name=ratingLimpiezaPersonal] {
             display: none;
         }
 
@@ -93,9 +91,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="bootstrap/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="bootstrap/css/sb-admin-2.min.css" rel="stylesheet">
@@ -151,8 +147,7 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="inputFechaNacimineto" class="form-label">Fecha de Nacimineto</label>
-                                    <input type="date" class="form-control" id="inputFechaNacimiento" placeholder=""
-                                        required>
+                                    <input type="date" class="form-control" id="inputFechaNacimiento" placeholder="" required>
                                 </div>
 
                                 <div class="col-12">
@@ -180,7 +175,7 @@
                                 <h5> Ayudanos llenando la encuesta. </h5>
                                 <hr>
 
-                                <h5 class=" card-title text-left">1. Atención-Servicio al cliente</h5>
+                                <h5 class=" card-title text-left">1. ¿La atención del personal fue?</h5>
                                 <div class="col-md- text-center">
                                     <input type="radio" name="ratingAtencion" value="1" id="rating1_1">
                                     <label class="number" for="rating1_1">1</label>
@@ -214,7 +209,7 @@
 
                                 </div>
 
-                                <h5 class="card-title text-left">2. Sabor del producto</h5>
+                                <h5 class="card-title text-left">2. ¿El sabor del producto estuvo ?</h5>
                                 <div class="col-md- text-center">
                                     <input type="radio" name="ratingSabor" value="1" id="rating2_1">
                                     <label class="number" for="rating2_1">1</label>
@@ -248,293 +243,171 @@
 
                                 </div>
 
-                                <h5 class="card-title text-left">3. Frescura del producto</h5>
+                                <h5 class="card-title text-left">3. ¿La presentación del producto estuvo?</h5>
                                 <div class="col-md- text-center">
-                                    <input type="radio" name="ratingFrescura" value="1" id="rating3_1">
+                                    <input type="radio" name="ratingPresentacion" value="1" id="rating3_1">
                                     <label class="number" for="rating3_1">1</label>
 
-                                    <input type="radio" name="ratingFrescura" value="2" id="rating3_2">
+                                    <input type="radio" name="ratingPresentacion" value="2" id="rating3_2">
                                     <label class="number" for="rating3_2">2</label>
 
-                                    <input type="radio" name="ratingFrescura" value="3" id="rating3_3">
+                                    <input type="radio" name="ratingPresentacion" value="3" id="rating3_3">
                                     <label class="number" for="rating3_3">3</label>
 
-                                    <input type="radio" name="ratingFrescura" value="4" id="rating3_4">
+                                    <input type="radio" name="ratingPresentacion" value="4" id="rating3_4">
                                     <label class="number" for="rating3_4">4</label>
 
-                                    <input type="radio" name="ratingFrescura" value="5" id="rating3_5">
+                                    <input type="radio" name="ratingPresentacion" value="5" id="rating3_5">
                                     <label class="number" for="rating3_5">5</label>
 
-                                    <input type="radio" name="ratingFrescura" value="6" id="rating3_6">
+                                    <input type="radio" name="ratingPresentacion" value="6" id="rating3_6">
                                     <label class="number" for="rating3_6">6</label>
 
-                                    <input type="radio" name="ratingFrescura" value="7" id="rating3_7">
+                                    <input type="radio" name="ratingPresentacion" value="7" id="rating3_7">
                                     <label class="number" for="rating3_7">7</label>
 
-                                    <input type="radio" name="ratingFrescura" value="8" id="rating3_8">
+                                    <input type="radio" name="ratingPresentacion" value="8" id="rating3_8">
                                     <label class="number" for="rating3_8">8</label>
                                     <!-- ... -->
-                                    <input type="radio" name="ratingFrescura" value="9" id="rating3_9">
+                                    <input type="radio" name="ratingPresentacion" value="9" id="rating3_9">
                                     <label class="number" for="rating3_9">9</label>
 
-                                    <input type="radio" name="ratingFrescura" value="10" id="rating3_10">
+                                    <input type="radio" name="ratingPresentacion" value="10" id="rating3_10">
                                     <label class="number" for="rating3_10">10</label>
 
                                 </div>
 
-                                <h5 class="card-title text-left">4. Temperatura del producto</h5>
+                                <h5 class="card-title text-left">4. Disponibilidad del producto</h5>
                                 <div class="col-md- text-center">
-                                    <input type="radio" name="ratingTemperatura" value="1" id="rating4_1">
+                                    <input type="radio" name="ratingDisponibilidad" value="1" id="rating4_1">
                                     <label class="number" for="rating4_1">1</label>
 
-                                    <input type="radio" name="ratingTemperatura" value="2" id="rating4_2">
+                                    <input type="radio" name="ratingDisponibilidad" value="2" id="rating4_2">
                                     <label class="number" for="rating4_2">2</label>
 
-                                    <input type="radio" name="ratingTemperatura" value="3" id="rating4_3">
+                                    <input type="radio" name="ratingDisponibilidad" value="3" id="rating4_3">
                                     <label class="number" for="rating4_3">3</label>
 
-                                    <input type="radio" name="ratingTemperatura" value="4" id="rating4_4">
+                                    <input type="radio" name="ratingDisponibilidad" value="4" id="rating4_4">
                                     <label class="number" for="rating4_4">4</label>
 
-                                    <input type="radio" name="ratingTemperatura" value="5" id="rating4_5">
+                                    <input type="radio" name="ratingDisponibilidad" value="5" id="rating4_5">
                                     <label class="number" for="rating4_5">5</label>
 
-                                    <input type="radio" name="ratingTemperatura" value="6" id="rating4_6">
+                                    <input type="radio" name="ratingDisponibilidad" value="6" id="rating4_6">
                                     <label class="number" for="rating4_6">6</label>
 
-                                    <input type="radio" name="ratingTemperatura" value="7" id="rating4_7">
+                                    <input type="radio" name="ratingDisponibilidad" value="7" id="rating4_7">
                                     <label class="number" for="rating4_7">7</label>
 
-                                    <input type="radio" name="ratingTemperatura" value="8" id="rating4_8">
+                                    <input type="radio" name="ratingDisponibilidad" value="8" id="rating4_8">
                                     <label class="number" for="rating4_8">8</label>
                                     <!-- ... -->
-                                    <input type="radio" name="ratingTemperatura" value="9" id="rating4_9">
+                                    <input type="radio" name="ratingDisponibilidad" value="9" id="rating4_9">
                                     <label class="number" for="rating4_9">9</label>
 
-                                    <input type="radio" name="ratingTemperatura" value="10" id="rating4_10">
+                                    <input type="radio" name="ratingDisponibilidad" value="10" id="rating4_10">
                                     <label class="number" for="rating4_10">10</label>
 
                                 </div>
 
-                                <h5 class="card-title text-left">5. Tiempo de espera del producto</h5>
+
+
+                                <h5 class="card-title text-left">5. Limpieza del local</h5>
+                                <div class="col-md- text-center">
+                                    <input type="radio" name="ratingLimpiezaLocal" value="1" id="rating5_1">
+                                    <label class="number" for="rating5_1">1</label>
+
+                                    <input type="radio" name="ratingLimpiezaLocal" value="2" id="rating5_2">
+                                    <label class="number" for="rating5_2">2</label>
+
+                                    <input type="radio" name="ratingLimpiezaLocal" value="3" id="rating5_3">
+                                    <label class="number" for="rating5_3">3</label>
+
+                                    <input type="radio" name="ratingLimpiezaLocal" value="4" id="rating5_4">
+                                    <label class="number" for="rating5_4">4</label>
+
+                                    <input type="radio" name="ratingLimpiezaLocal" value="5" id="rating5_5">
+                                    <label class="number" for="rating5_5">5</label>
+
+                                    <input type="radio" name="ratingLimpiezaLocal" value="6" id="rating5_6">
+                                    <label class="number" for="rating5_6">6</label>
+
+                                    <input type="radio" name="ratingLimpiezaLocal" value="7" id="rating5_7">
+                                    <label class="number" for="rating5_7">7</label>
+
+                                    <input type="radio" name="ratingLimpiezaLocal" value="8" id="rating5_8">
+                                    <label class="number" for="rating5_8">8</label>
+                                    <!-- ... -->
+                                    <input type="radio" name="ratingLimpiezaLocal" value="9" id="rating5_9">
+                                    <label class="number" for="rating5_9">9</label>
+
+                                    <input type="radio" name="ratingLimpiezaLocal" value="10" id="ratin5_10">
+                                    <label class="number" for="rating5_10">10</label>
+
+                                </div>
+
+
+
+                                <h5 class="card-title text-left">6. Limpieza del personal</h5>
+
+                                <div class="col-md- text-center">
+                                    <input type="radio" name="ratingLimpiezaPersonal" value="1" id="rating6_1">
+                                    <label class="number" for="rating6_1">1</label>
+
+                                    <input type="radio" name="ratingLimpiezaPersonal" value="2" id="rating6_2">
+                                    <label class="number" for="rating6_2">2</label>
+
+                                    <input type="radio" name="ratingLimpiezaPersonal" value="3" id="rating6_3">
+                                    <label class="number" for="rating6_3">3</label>
+
+                                    <input type="radio" name="ratingLimpiezaPersonal" value="4" id="rating6_4">
+                                    <label class="number" for="rating6_4">4</label>
+
+                                    <input type="radio" name="ratingLimpiezaPersonal" value="5" id="rating6_5">
+                                    <label class="number" for="rating6_5">5</label>
+
+                                    <input type="radio" name="ratingLimpiezaPersonal" value="6" id="rating6_6">
+                                    <label class="number" for="rating6_6">6</label>
+
+                                    <input type="radio" name="ratingLimpiezaPersonal" value="7" id="rating6_7">
+                                    <label class="number" for="rating6_7">7</label>
+
+                                    <input type="radio" name="ratingLimpiezaPersonal" value="8" id="rating6_8">
+                                    <label class="number" for="rating6_8">8</label>
+                                    <!-- ... -->
+                                    <input type="radio" name="ratingLimpiezaPersonal" value="9" id="rating6_9">
+                                    <label class="number" for="rating6_9">9</label>
+
+                                    <input type="radio" name="ratingLimpiezaPersonal" value="10" id="rating6_10">
+                                    <label class="number" for="rating6_10">10</label>
+
+                                </div>
+
+                                <h5 class="card-title text-left">7. Tiempo de espera del producto</h5>
 
                                 <div class="d-flex justify-content-center align-items-center ">
                                     <div class="d-flex flex-column">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="tiempo" id="tiempoRadio1"
-                                                value="1">
+                                            <input class="form-check-input" type="radio" name="tiempo" id="tiempoRadio1" value="1">
                                             <label class="form-check-label" for="tiempoRadio1">
                                                 De 5 a 7 minutos
-                                            </label>
+                                            </label>    
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="tiempo" id="tiempoRadio2"
-                                                value="2">
+                                            <input class="form-check-input" type="radio" name="tiempo" id="tiempoRadio2" value="2">
                                             <label class="form-check-label" for="tiempoRadio2">
                                                 De 7 a 10 minutos
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="tiempo" id="tiempoRadio3"
-                                                value="3">
+                                            <input class="form-check-input" type="radio" name="tiempo" id="tiempoRadio3" value="3">
                                             <label class="form-check-label" for="tiempoRadio3">
                                                 De 10 a más minutos
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-
-                                <h5 class="card-title text-left">6. Limpieza del local</h5>
-                                <div class="col-md- text-center">
-                                    <input type="radio" name="ratingLimpiezaLocal" value="1" id="rating6_1">
-                                    <label class="number" for="rating6_1">1</label>
-
-                                    <input type="radio" name="ratingLimpiezaLocal" value="2" id="rating6_2">
-                                    <label class="number" for="rating6_2">2</label>
-
-                                    <input type="radio" name="ratingLimpiezaLocal" value="3" id="rating6_3">
-                                    <label class="number" for="rating6_3">3</label>
-
-                                    <input type="radio" name="ratingLimpiezaLocal" value="4" id="rating6_4">
-                                    <label class="number" for="rating6_4">4</label>
-
-                                    <input type="radio" name="ratingLimpiezaLocal" value="5" id="rating6_5">
-                                    <label class="number" for="rating6_5">5</label>
-
-                                    <input type="radio" name="ratingLimpiezaLocal" value="6" id="rating6_6">
-                                    <label class="number" for="rating6_6">6</label>
-
-                                    <input type="radio" name="ratingLimpiezaLocal" value="7" id="rating6_7">
-                                    <label class="number" for="rating6_7">7</label>
-
-                                    <input type="radio" name="ratingLimpiezaLocal" value="8" id="rating6_8">
-                                    <label class="number" for="rating6_8">8</label>
-                                    <!-- ... -->
-                                    <input type="radio" name="ratingLimpiezaLocal" value="9" id="rating6_9">
-                                    <label class="number" for="rating6_9">9</label>
-
-                                    <input type="radio" name="ratingLimpiezaLocal" value="10" id="rating6_10">
-                                    <label class="number" for="rating6_10">10</label>
-
-                                </div>
-
-
-
-                                <h5 class="card-title text-left">7. Limpieza del personal</h5>
-
-                                <div class="col-md- text-center">
-                                    <input type="radio" name="ratingLimpiezaPersonal" value="1" id="rating7_1">
-                                    <label class="number" for="rating7_1">1</label>
-
-                                    <input type="radio" name="ratingLimpiezaPersonal" value="2" id="rating7_2">
-                                    <label class="number" for="rating7_2">2</label>
-
-                                    <input type="radio" name="ratingLimpiezaPersonal" value="3" id="rating7_3">
-                                    <label class="number" for="rating7_3">3</label>
-
-                                    <input type="radio" name="ratingLimpiezaPersonal" value="4" id="rating7_4">
-                                    <label class="number" for="rating7_4">4</label>
-
-                                    <input type="radio" name="ratingLimpiezaPersonal" value="5" id="rating7_5">
-                                    <label class="number" for="rating7_5">5</label>
-
-                                    <input type="radio" name="ratingLimpiezaPersonal" value="6" id="rating7_6">
-                                    <label class="number" for="rating7_6">6</label>
-
-                                    <input type="radio" name="ratingLimpiezaPersonal" value="7" id="rating7_7">
-                                    <label class="number" for="rating7_7">7</label>
-
-                                    <input type="radio" name="ratingLimpiezaPersonal" value="8" id="rating7_8">
-                                    <label class="number" for="rating7_8">8</label>
-                                    <!-- ... -->
-                                    <input type="radio" name="ratingLimpiezaPersonal" value="9" id="rating7_9">
-                                    <label class="number" for="rating7_9">9</label>
-
-                                    <input type="radio" name="ratingLimpiezaPersonal" value="10" id="rating7_10">
-                                    <label class="number" for="rating7_10">10</label>
-
-                                </div>
-
-
-
-                                <h5 class="card-title text-left">8. Disponibilidad del producto</h5>
-
-                                <div class="col-md- text-center">
-                                    <input type="radio" name="ratingDisponibilidad" value="1" id="rating8_1">
-                                    <label class="number" for="rating8_1">1</label>
-
-                                    <input type="radio" name="ratingDisponibilidad" value="2" id="rating8_2">
-                                    <label class="number" for="rating8_2">2</label>
-
-                                    <input type="radio" name="ratingDisponibilidad" value="3" id="rating8_3">
-                                    <label class="number" for="rating8_3">3</label>
-
-                                    <input type="radio" name="ratingDisponibilidad" value="4" id="rating8_4">
-                                    <label class="number" for="rating8_4">4</label>
-
-                                    <input type="radio" name="ratingDisponibilidad" value="5" id="rating8_5">
-                                    <label class="number" for="rating8_5">5</label>
-
-                                    <input type="radio" name="ratingDisponibilidad" value="6" id="rating8_6">
-                                    <label class="number" for="rating8_6">6</label>
-
-                                    <input type="radio" name="ratingDisponibilidad" value="7" id="rating8_7">
-                                    <label class="number" for="rating8_7">7</label>
-
-                                    <input type="radio" name="ratingDisponibilidad" value="8" id="rating8_8">
-                                    <label class="number" for="rating8_8">8</label>
-                                    <!-- ... -->
-                                    <input type="radio" name="ratingDisponibilidad" value="9" id="rating8_9">
-                                    <label class="number" for="rating8_9">9</label>
-
-                                    <input type="radio" name="ratingDisponibilidad" value="10" id="rating8_10">
-                                    <label class="number" for="rating8_10">10</label>
-
-                                </div>
-                                <h5 class="card-title text-left">9. Conocimineto del producto por parte del personal
-                                </h5>
-
-                                <div class="col-md- text-center">
-                                    <input type="radio" name="ratingConocimiento" value="1" id="rating9_1">
-                                    <label class="number" for="rating9_1">1</label>
-
-                                    <input type="radio" name="ratingConocimiento" value="2" id="rating9_2">
-                                    <label class="number" for="rating9_2">2</label>
-
-                                    <input type="radio" name="ratingConocimiento" value="3" id="rating9_3">
-                                    <label class="number" for="rating9_3">3</label>
-
-                                    <input type="radio" name="ratingConocimiento" value="4" id="rating9_4">
-                                    <label class="number" for="rating9_4">4</label>
-
-                                    <input type="radio" name="ratingConocimiento" value="5" id="rating9_5">
-                                    <label class="number" for="rating9_5">5</label>
-
-                                    <input type="radio" name="ratingConocimiento" value="6" id="rating9_6">
-                                    <label class="number" for="rating9_6">6</label>
-
-                                    <input type="radio" name="ratingConocimiento" value="7" id="rating9_7">
-                                    <label class="number" for="rating9_7">7</label>
-
-                                    <input type="radio" name="ratingConocimiento" value="8" id="rating9_8">
-                                    <label class="number" for="rating9_8">8</label>
-                                    <!-- ... -->
-                                    <input type="radio" name="ratingConocimiento" value="9" id="rating9_9">
-                                    <label class="number" for="rating9_9">9</label>
-
-                                    <input type="radio" name="ratingConocimiento" value="10" id="rating9_10">
-                                    <label class="number" for="rating9_10">10</label>
-
-                                </div>
-
-
-
-                                <h5 class="card-title text-left">10. Amabilidad del personal</h5>
-
-                                <div class="col-md- text-center">
-                                    <input type="radio" name="ratingAmabilidad" value="1" id="rating10_1">
-                                    <label class="number" for="rating10_1">1</label>
-
-                                    <input type="radio" name="ratingAmabilidad" value="2" id="rating10_2">
-                                    <label class="number" for="rating10_2">2</label>
-
-                                    <input type="radio" name="ratingAmabilidad" value="3" id="rating10_3">
-                                    <label class="number" for="rating10_3">3</label>
-
-                                    <input type="radio" name="ratingAmabilidad" value="4" id="rating10_4">
-                                    <label class="number" for="rating10_4">4</label>
-
-                                    <input type="radio" name="ratingAmabilidad" value="5" id="rating10_5">
-                                    <label class="number" for="rating10_5">5</label>
-
-                                    <input type="radio" name="ratingAmabilidad" value="6" id="rating10_6">
-                                    <label class="number" for="rating10_6">6</label>
-
-                                    <input type="radio" name="ratingAmabilidad" value="7" id="rating10_7">
-                                    <label class="number" for="rating10_7">7</label>
-
-                                    <input type="radio" name="ratingAmabilidad" value="8" id="rating10_8">
-                                    <label class="number" for="rating10_8">8</label>
-                                    <!-- ... -->
-                                    <input type="radio" name="ratingAmabilidad" value="9" id="rating10_9">
-                                    <label class="number" for="rating10_9">9</label>
-
-                                    <input type="radio" name="ratingAmabilidad" value="10" id="rating10_10">
-                                    <label class="number" for="rating10_10">10</label>
-
-                                </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -555,8 +428,7 @@
 
                             </div>
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary "
-                                    style="margin-bottom: 10px;">Enviar</button>
+                                <button type="submit" class="btn btn-primary " style="margin-bottom: 10px;">Enviar</button>
                             </div>
                         </div>
                     </div>
@@ -575,6 +447,7 @@
     </div>
     <script>
         console.log("hola");
+
         function validarSeleccion() {
             var opciones = document.getElementsByName('ratingAtencion');
             var seleccionado = false;
@@ -594,7 +467,6 @@
             return true;
 
         }
-
     </script>
 
 
