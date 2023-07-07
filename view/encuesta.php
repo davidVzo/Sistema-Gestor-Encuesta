@@ -1,3 +1,9 @@
+<?php
+require '../controllers/conexion.php';
+require '../controllers/FuncionesCliente.php';
+require '../controllers/FuncionesEncuesta.php';
+// include ('');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -109,8 +115,8 @@
             <img src="sources2/img/logo.png" class="img-fluid" width="450px">
         </div>
 
-        <form method="post" onsubmit="return validarSeleccion()">
-
+        <!-- <form method="post" onsubmit="return validarSeleccion()">-->
+        <form method="Post" action="">
             <div class="row">
                 <div class="col">
 
@@ -118,38 +124,49 @@
                 <div class="col-sm-7 ">
 
                     <div class="card">
-                        <div class="card-header" style>
-                            <strong style="font-family:Calibri;" > Datos del Cliente </strong>
+                        <div class="card-header text-dark bg-warning mb-3" style>
+                            <strong style="font-family:Calibri;"> Datos del Cliente </strong>
 
                         </div>
                         <div class="card-body">
 
                             <div class="row g-3">
                                 <div class="col-12">
-                                    <label style="font-family:Calibri;"  for="inputCedula" class="form-label">Cédula</label>
-                                    <input type="text" class="form-control" id="inputCedula" placeholder="" required>
+                                    <label style="font-family:Calibri;" for="inputCedula"
+                                        class="form-label">Cédula</label>
+                                    <input type="text" class="form-control" id="inputCedula" placeholder=""
+                                        name="inputCedula" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label style="font-family:Calibri;" for="inputNombre" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="inputNombre" placeholder="" required>
+                                    <label style="font-family:Calibri;" for="inputNombre"
+                                        class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="inputNombre" name="inputNombre"
+                                        placeholder="" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <label style="font-family:Calibri;" for="inputApellido" class="form-label">Apellido</label>
-                                    <input type="text" class="form-control" id="inputApellido" placeholder="" required>
+                                    <label style="font-family:Calibri;" for="inputApellido"
+                                        class="form-label">Apellido</label>
+                                    <input type="text" class="form-control" id="inputApellido" placeholder=""
+                                        name="inputApellido" required>
                                 </div>
                                 <div class="col-12">
-                                    <label style="font-family:Calibri;" for="inputTelefono" class="form-label">Teléfono</label>
-                                    <input type="text" class="form-control" id="inputTelefono" placeholder="" required>
+                                    <label style="font-family:Calibri;" for="inputTelefono"
+                                        class="form-label">Teléfono</label>
+                                    <input type="text" class="form-control" id="inputTelefono" placeholder=""
+                                        name="inputTelefono" required>
                                 </div>
                                 <div class="col-12">
-                                    <label style="font-family:Calibri;" for="inputFechaNacimineto" class="form-label">Fecha de Nacimineto</label>
-                                    <input type="date" class="form-control" id="inputFechaNacimiento" placeholder=""
-                                        required>
+                                    <label style="font-family:Calibri;" for="inputFechaNacimineto"
+                                        class="form-label">Fecha de Nacimineto</label>
+                                    <input type="date" class="form-control" id="inputFechaNacimiento"
+                                        name="inputFechaNacimiento" placeholder="" required>
                                 </div>
 
                                 <div class="col-12">
-                                    <label style="font-family:Calibri;" for="inputAddress" class="form-label">Dirección</label>
-                                    <input type="text" class="form-control" id="inputAddress" placeholder=" " required>
+                                    <label style="font-family:Calibri;" for="inputAddress"
+                                        class="form-label">Dirección</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder=" "
+                                        name="inputAddress" required>
                                 </div>
 
                                 <!-- <div class="col-md-4">
@@ -171,12 +188,12 @@
 
                     <div class="card ">
                         <div class="card-header">
-                            <strong style="font-family:Calibri;" > Encuesta de satisfacción del cliente </strong>
+                            <strong style="font-family:Calibri;"> Encuesta de satisfacción del cliente </strong>
 
                         </div>
                         <!-- style=" margin-left: -10px; " -->
                         <div class="card-body">
-                            <h6 style="font-family:Calibri;" > Ayudanos llenando la encuesta. </h6>
+                            <h6 style="font-family:Calibri;"> Ayudanos llenando la encuesta. </h6>
 
                             <div class="d-flex justify-content-center align-items-center ">
                                 <div class="d-flex flex-column">
@@ -197,7 +214,8 @@
                             </div>
                             <br>
 
-                            <h6 style="font-family:Calibri;" class=" card-title text-left">1. ¿La atención del personal fue?</h6>
+                            <h6 style="font-family:Calibri;" class=" card-title text-left">1. ¿La atención del personal
+                                fue?</h6>
                             <div class="col-md- text-center">
                                 <input type="radio" name="ratingAtencion" value="1" id="rating1_1">
                                 <label class="number" for="rating1_1">1</label>
@@ -232,7 +250,8 @@
                             </div>
                             <br>
 
-                            <h6 style="font-family:Calibri;" class="card-title text-left">2. ¿El sabor del producto estuvo ?</h6>
+                            <h6 style="font-family:Calibri;" class="card-title text-left">2. ¿El sabor del producto
+                                estuvo ?</h6>
                             <div class="col-md- text-center">
                                 <input type="radio" name="ratingSabor" value="1" id="rating2_1">
                                 <label class="number" for="rating2_1">1</label>
@@ -267,7 +286,8 @@
                             </div>
                             <br>
 
-                            <h6 style="font-family:Calibri;" class="card-title text-left">3. ¿La presentación del producto estuvo?</h6>
+                            <h6 style="font-family:Calibri;" class="card-title text-left">3. ¿La presentación del
+                                producto estuvo?</h6>
                             <div class="col-md- text-center">
                                 <input type="radio" name="ratingPresentacion" value="1" id="rating3_1">
                                 <label class="number" for="rating3_1">1</label>
@@ -301,7 +321,8 @@
 
                             </div>
                             <br>
-                            <h6 style="font-family:Calibri;"  class="card-title text-left">4. Disponibilidad del producto</h6>
+                            <h6 style="font-family:Calibri;" class="card-title text-left">4. Disponibilidad del producto
+                            </h6>
                             <div class="col-md- text-center">
                                 <input type="radio" name="ratingDisponibilidad" value="1" id="rating4_1">
                                 <label class="number" for="rating4_1">1</label>
@@ -373,7 +394,7 @@
                             </div>
                             <br>
 
-                            <h6 style="font-family:Calibri;"  class="card-title text-left">6. Limpieza del personal</h6>
+                            <h6 style="font-family:Calibri;" class="card-title text-left">6. Limpieza del personal</h6>
 
                             <div class="col-md- text-center">
                                 <input type="radio" name="ratingLimpiezaPersonal" value="1" id="rating6_1">
@@ -409,14 +430,15 @@
                             </div>
                             <br>
 
-                            <h6 class="card-title text-left" style="font-family:Calibri;" >7. Tiempo de espera del producto</h6>
+                            <h6 class="card-title text-left" style="font-family:Calibri;">7. Tiempo de espera del
+                                producto</h6>
 
                             <div class="d-flex justify-content-center align-items-center ">
                                 <div class="d-flex flex-column">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="tiempo" id="tiempoRadio1"
                                             value="1">
-                                        <label style="font-family:Calibri;"  class="form-check-label" for="tiempoRadio1">
+                                        <label style="font-family:Calibri;" class="form-check-label" for="tiempoRadio1">
                                             De 5 a 7 minutos
                                         </label>
                                     </div>
@@ -457,13 +479,15 @@
                         </div>
                         <br>
                         <div class="col-12">
-                            <button  type="submit" class="btn btn-primary " style="margin-bottom: 10px;">Enviar</button>
+                            <button type="submit" class="btn btn-primary " style="margin-bottom: 10px;"
+                                name="guardo">Enviar</button>
                         </div>
 
 
                     </div>
-                    <div style="margin: 25px;" >
-                        <strong style="font-family:Calibri;" > La información recolectada en esta encuesta se utilizará para fines de Marketing
+                    <div style="margin: 25px;">
+                        <strong style="font-family:Calibri;"> La información recolectada en esta encuesta se utilizará
+                            para fines de Marketing
                         </strong>
                     </div>
 
@@ -479,7 +503,7 @@
 
     </div>
     <script>
-        console.log("hola");
+
 
         function validarSeleccion() {
             var opciones = document.getElementsByName('ratingAtencion');
@@ -510,3 +534,50 @@
 </body>
 
 </html>
+<?php
+
+if (isset($_POST['guardo'])) {
+    $Id = " ";
+    $Cedula = $_POST['inputCedula'];
+    $Nombre = $_POST['inputNombre'];
+    $Apellido = $_POST['inputApellido'];
+    $Telefono = $_POST['inputTelefono'];
+    $Fecha_nacimiento = $_POST['inputFechaNacimiento'];
+    $Direccion = $_POST['inputAddress'];
+    //
+    $Pregunta_1 = $_POST['ratingAtencion'];
+    $Pregunta_2 = $_POST['ratingSabor'];
+    $Pregunta_3 = $_POST['ratingPresentacion'];
+    $Pregunta_4 = $_POST['ratingDisponibilidad'];
+    $Pregunta_5 = $_POST['ratingLimpiezaLocal'];
+    $Pregunta_6 = $_POST['ratingLimpiezaPersonal'];
+    $Pregunta_7 = $_POST['tiempo'];
+
+
+
+
+
+
+
+
+
+    if (
+        insertarCliente($con, $Id, $Cedula, $Nombre, $Apellido, $Telefono, $Fecha_nacimiento, $Direccion) &&
+        insertarEncuesta($con, $Id, $Pregunta_1, $Pregunta_2, $Pregunta_3, $Pregunta_4, $Pregunta_5, $Pregunta_6, $Pregunta_7)
+    ) {
+        echo '<script language="javascript"> alert("Registrado !!");'
+            . ' window.location="encuesta.php" </script>';
+
+    } else {
+        echo '<script language="javascript"> alert("Registro no ingresado !!");'
+            . ' window.location="encuesta.php" </script>';
+
+    }
+
+
+}
+
+
+
+
+?>
