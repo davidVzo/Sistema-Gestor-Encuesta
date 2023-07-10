@@ -1,6 +1,7 @@
 <?php
 # Si no entiendes el código, primero mira a login.php
 # Iniciar sesión para usar $_SESSION
+require_once '../controllers/conexion.php';
 session_start();
 # Y ahora leer si NO hay algo llamado usuario en la sesión,
 # usando empty (vacío, ¿está vacío?)
@@ -8,8 +9,26 @@ session_start();
 if (empty($_SESSION["usuario"])) {
     # Lo redireccionamos al formulario de inicio de sesión
     header("Location: ../index.php");
+
     # Y salimos del script
     exit();
+} else {
+
+    //echo "Hola", $_SESSION["usuario"];
+    $usuario = $_SESSION["usuario"];
+    $consulta = "SELECT id FROM usuario";
+    $consulta .= " WHERE usuario = '$usuario'";
+    $resultado = $con->query($consulta);
+
+    if ($fila = mysqli_fetch_assoc($resultado)) {
+        //echo $fila["id"];
+        $idUsuario = $fila["id"];
+    }
+    //echo $resultado;
+    //return $resultado;
+
+
+
 }
 # No hace falta un else, pues si el usuario no se loguea, todo lo de abajo no se ejecuta
 //echo "Soy un mensaje secreto";
@@ -360,7 +379,7 @@ if (empty($_SESSION["usuario"])) {
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="editarUsuario.php?id=<?php echo $idUsuario; ?>">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Perfil
                                 </a>

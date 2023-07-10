@@ -552,14 +552,7 @@ if (isset($_POST['guardo'])) {
     $Pregunta_5 = $_POST['ratingLimpiezaLocal'];
     $Pregunta_6 = $_POST['ratingLimpiezaPersonal'];
     $Pregunta_7 = $_POST['tiempo'];
-
-
-
-
-
-
-
-
+    
 
     if (
         insertarCliente($con, $Id, $Cedula, $Nombre, $Apellido, $Telefono, $Fecha_nacimiento, $Direccion) &&
