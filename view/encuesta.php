@@ -2,7 +2,8 @@
 require '../controllers/conexion.php';
 require '../controllers/FuncionesCliente.php';
 require '../controllers/FuncionesEncuesta.php';
-// include ('');
+require '../controllers/funcionesRegistro.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +12,7 @@ require '../controllers/FuncionesEncuesta.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Encuesta</title>
 
     <style>
         label {
@@ -536,6 +537,8 @@ require '../controllers/FuncionesEncuesta.php';
 </html>
 <?php
 
+
+
 if (isset($_POST['guardo'])) {
     $Id = " ";
     $Cedula = $_POST['inputCedula'];
@@ -552,11 +555,30 @@ if (isset($_POST['guardo'])) {
     $Pregunta_5 = $_POST['ratingLimpiezaLocal'];
     $Pregunta_6 = $_POST['ratingLimpiezaPersonal'];
     $Pregunta_7 = $_POST['tiempo'];
-    
+
+    $fechaActual = date("d-m-Y");
+
+    // Consulta para obtener el último valor de la columna
+    $query = "SELECT MAX(id) AS ultimo_valor FROM encuesta";
+    $resultado = mysqli_query($con, $query);
+    $fila = mysqli_fetch_assoc($resultado);
+    $ultimoValor = $fila['ultimo_valor'];
+
+    mysqli_free_result($resultado);
+
+    echo $ultimoValor = $ultimoValor + 1;
+
 
     if (
-        insertarCliente($con, $Id, $Cedula, $Nombre, $Apellido, $Telefono, $Fecha_nacimiento, $Direccion) &&
-        insertarEncuesta($con, $Id, $Pregunta_1, $Pregunta_2, $Pregunta_3, $Pregunta_4, $Pregunta_5, $Pregunta_6, $Pregunta_7)
+        insertarCliente($con, $Cedula, $Nombre, $Apellido, $Telefono, $Fecha_nacimiento, $Direccion) &&
+        insertarEncuesta($con, $ultimoValor, $Pregunta_1, $Pregunta_2, $Pregunta_3, $Pregunta_4, $Pregunta_5, $Pregunta_6, $Pregunta_7) &&
+        insertarRegistro(
+            $con,
+            $Id,
+            $fechaActual,
+            $Cedula,
+            $ultimoValor
+        )
     ) {
         echo '<script language="javascript"> alert("Registrado !!");'
             . ' window.location="encuesta.php" </script>';
@@ -566,6 +588,7 @@ if (isset($_POST['guardo'])) {
             . ' window.location="encuesta.php" </script>';
 
     }
+
 
 
 }

@@ -10,7 +10,6 @@ if (empty($_SESSION["usuario"])) {
     # Lo redireccionamos al formulario de inicio de sesión
     header("Location: ../index.php");
 
-    # Y salimos del script
     exit();
 } else {
 
@@ -21,18 +20,18 @@ if (empty($_SESSION["usuario"])) {
     $resultado = $con->query($consulta);
 
     if ($fila = mysqli_fetch_assoc($resultado)) {
-        //echo $fila["id"];
+        
         $idUsuario = $fila["id"];
     }
-    //echo $resultado;
-    //return $resultado;
+    
+    
 
 
 
 }
-# No hace falta un else, pues si el usuario no se loguea, todo lo de abajo no se ejecuta
-//echo "Soy un mensaje secreto";
-//echo $_SESSION["usuario"];
+
+
+
 ?>
 
 <!DOCTYPE html>
