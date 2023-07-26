@@ -10,6 +10,7 @@ if (isset($_POST['editar'])) {
     $Apellido = $_POST['apellido'];
     $Direccion = $_POST['direccion'];
     $Telefono = $_POST['telefono'];
+    $Estado = $_POST['estado'];
 
     $Usuario = $_POST['usuario'];
     $Correo = $_POST['correo'];
@@ -69,7 +70,7 @@ if (isset($_POST['editar'])) {
                 . ' window.location="listadoUsuarios.php" </script>';
         }
     } else {
-        if (actualizarUsuario($con, $Id, $Nombre, $Apellido, $Correo, $Telefono, $Direccion)) {
+        if (actualizarUsuario($con, $Id, $Nombre, $Apellido, $Correo, $Telefono, $Direccion, $Estado)) {
 
             echo '<script language="javascript"> alert("Usuario Actualizado !!");'
                 . ' window.location="listadoUsuarios.php" </script>';

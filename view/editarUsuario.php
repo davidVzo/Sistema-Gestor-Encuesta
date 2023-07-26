@@ -252,7 +252,27 @@ if (empty($_SESSION["usuario"])) {
                                             </span><span class="text-black-50">
                                                 <?php echo $fila['correo']; ?>
                                             </span><span>
-                                            </span></div>
+                                            </span>
+                                            <hr>
+                                            <!-- <span class="font-weight-bold">
+                                                Estado:
+                                            </span>
+
+                                            <span class="text-black-50">
+
+                                                 <?php
+                                                 if ($fila['estado'] == 0) {
+                                                     echo "Desactivado";
+                                                 } else {
+                                                     echo "Activado";
+
+                                                 }
+
+                                                 ?>
+                                            </span> -->
+
+
+                                        </div>
                                     </div>
                                     <div class="col-md-8 border-right">
                                         <div class="p-3 py-5">
@@ -285,6 +305,27 @@ if (empty($_SESSION["usuario"])) {
                                                         placeholder="Ingrese correo" value="<?php echo $fila['correo']; ?>">
                                                 </div>
 
+                                                <div class="col-md-12"><label class="labels">Estado</label>
+
+                                                    <div class="input-group mb-3">
+                                                        <select class="custom-select" name="estado" >
+                                                        <?php
+                                                        if ($fila['estado'] == 0 ) {
+                                                            echo"  <option selected value = '' > Desactivado </option>  ";
+                                                            echo " <option value='1'>Activado</option> ";
+                                                        }else{
+                                                            echo"  <option selected value = '' > Activado </option>  ";
+                                                            echo " <option value='0'>Desactivar</option> ";
+
+                                                        }
+                                                        
+                                                        ?>
+
+                                                        </select>
+
+                                                    </div>
+
+                                                </div>
 
                                             </div>
                                             <hr />

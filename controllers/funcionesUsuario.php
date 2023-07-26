@@ -29,10 +29,10 @@ function loginUsuario($con, $Usuario, $Contrasena)
 //     return $resultado;
 // }
 
-function insertarUsuario($con, $id, $usuario, $contrasena, $nombre, $apellido, $direccion, $telefono, $correo, $imagen, $cedula)
+function insertarUsuario($con, $id, $usuario, $contrasena, $nombre, $apellido, $direccion, $telefono, $correo, $imagen, $cedula, $estado)
 {
-    $insertar = $con->query("INSERT INTO usuario(id, usuario, contrasena, nombre, apellido, direccion, telefono, correo, imagen, cedula )"
-        . "VALUES ('$id','$usuario','$contrasena', '$nombre', '$apellido', '$direccion', '$telefono', '$correo', '$imagen', '$cedula')");
+    $insertar = $con->query("INSERT INTO usuario(id, usuario, contrasena, nombre, apellido, direccion, telefono, correo, imagen, cedula, estado )"
+        . "VALUES ('$id','$usuario','$contrasena', '$nombre', '$apellido', '$direccion', '$telefono', '$correo', '$imagen', '$cedula', '$estado')");
     //Antes del value se hace referencia a los campos de la BDD
     //En el VALUES  se hace referencia a los datos/parametros que se van a ingresar
     return $insertar;
@@ -44,11 +44,11 @@ function actualizarPerfil($con, $id, $usuario, $contrasena, $imagen)
     return $actualizar;
 }
 
-function actualizarUsuario($con, $id, $nombre, $apellido, $correo, $telefono, $direccion)
+function actualizarUsuario($con, $id, $nombre, $apellido, $correo, $telefono, $direccion, $estado)
 {
     //LAS PK de las tablas no se deben actualizar 
     $actualizar = $con->query("UPDATE usuario SET nombre = '$nombre', "
-        . "apellido = '$apellido', correo = '$correo', telefono = '$telefono', direccion = '$direccion' WHERE id = '$id'");
+        . "apellido = '$apellido', correo = '$correo', telefono = '$telefono', direccion = '$direccion', estado = '$estado' WHERE id = '$id'");
     return $actualizar;
 }
 

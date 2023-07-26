@@ -20,11 +20,11 @@ if (empty($_SESSION["usuario"])) {
     $resultado = $con->query($consulta);
 
     if ($fila = mysqli_fetch_assoc($resultado)) {
-        
+
         $idUsuario = $fila["id"];
     }
-    
-    
+
+
 
 
 
@@ -87,15 +87,15 @@ if (empty($_SESSION["usuario"])) {
             </li>
 
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <!-- <hr class="sidebar-divider"> -->
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <!-- <div class="sidebar-heading">
                 Interface
-            </div>
+            </div> -->
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
@@ -108,10 +108,10 @@ if (empty($_SESSION["usuario"])) {
                         <a class="collapse-item" href="../pruebas/cuestionario.php">Cards</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
@@ -127,7 +127,7 @@ if (empty($_SESSION["usuario"])) {
                         <a class="collapse-item" href="utilities-other.html">Other</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -146,13 +146,15 @@ if (empty($_SESSION["usuario"])) {
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
+                        <!-- <h6 class="collapse-header">Login Screens:</h6>
                         <a class="collapse-item" href="login.html">Login</a>
                         <a class="collapse-item" href="register.html">Register</a>
                         <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                         <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <h6 class="collapse-header">Other Pages:</h6> -->
+
+                        <a class="collapse-item" href="listadoRespuestas.php">Respuestas</a>
+                        <a class="collapse-item" href="listadoClientes.php">Clientes</a>
                         <a class="collapse-item" href="encuesta.php">Encuesta</a>
 
                     </div>

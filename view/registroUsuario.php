@@ -215,6 +215,7 @@ if (isset($_POST['guardo'])) {
     $Telefono = $_POST['telefono'];
     $Correo = $_POST['correo'];
     $Cedula = $_POST['cedula'];
+    $Estado = 0;
 
     $Imagen = $_FILES['imagen']['name'];
 
@@ -247,7 +248,7 @@ if (isset($_POST['guardo'])) {
         $Imagen = " ";
     }
 
-    if (insertarUsuario($con, $Id, $Usuario, $Contrasena, $Nombre, $Apellido, $Direccion, $Telefono, $Correo, $Imagen, $Cedula)) {
+    if (insertarUsuario($con, $Id, $Usuario, $Contrasena, $Nombre, $Apellido, $Direccion, $Telefono, $Correo, $Imagen, $Cedula, $Estado)) {
 
         echo '<script language="javascript"> alert("Registrado !!");'
             . ' window.location="../index.php" </script>';

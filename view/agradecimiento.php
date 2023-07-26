@@ -28,7 +28,7 @@
 
             </div>
             <div class="card-body" style="padding:20px 30px 25px;">
-                <h1>Encuesta de Satisfacción al Cliente</h1>
+                <h1 style="font-family: Calibri; color: #212f3d ; ">Encuesta de Satisfacción al Cliente</h1>
                 <h5 style="color: black;font-family: Calibri ;margin-top: 15px; ">Tus respuestas han sido guardadas</h5>
                 <br>
 
@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <h5 style="color: black;font-family: Calibri; margin: 10px;">Este contenido es creado para fines de Marketing
+        <h5 style="color:  #2c3e50 ;font-family: Calibri; margin: 10px;">Este contenido es creado para fines de Marketing
         </h5>
 
     </div>
